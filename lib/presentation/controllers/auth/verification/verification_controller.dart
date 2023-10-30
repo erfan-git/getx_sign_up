@@ -74,8 +74,8 @@ class VerificationController extends GetxController {
     for (int i = 0; i < 5; i++) {
       code = code + random.nextInt(9).toString();
     }
+
     verifyCode.value = code;
-    print(code);
     SchedulerBinding.instance.addPostFrameCallback(
       (timeStamp) {
         Get.showSnackbar(
